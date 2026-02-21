@@ -8,10 +8,17 @@ const Hero: React.FC = () => {
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-dark-900/80 to-dark-800/40 z-10"></div>
       
-      {/* Video background or image placeholder */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-dark-900/70"></div>
-        <div className="h-full w-full bg-[url('https://images.pexels.com/photos/3379942/pexels-photo-3379942.jpeg')] bg-cover bg-center"></div>
+      {/* YouTube video background */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 bg-dark-900/60 z-[1]"></div>
+        <iframe
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] md:w-[200%] md:h-[200%] pointer-events-none"
+          src="https://www.youtube.com/embed/-FoZVap5I4o?autoplay=1&mute=1&loop=1&playlist=-FoZVap5I4o&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+          title="R Flow Productions background video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          referrerPolicy="strict-origin-when-cross-origin"
+          style={{ border: 0 }}
+        />
       </div>
       
       <div className="container relative mx-auto px-4 md:px-6 z-20">
