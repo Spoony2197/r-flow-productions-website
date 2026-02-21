@@ -11,6 +11,8 @@ const Hero: React.FC = () => {
       {/* YouTube video background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-dark-900/60 z-[1]"></div>
+        {/* Top gradient to mask YouTube channel branding */}
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-dark-900 to-transparent z-[2]"></div>
         <iframe
           className="absolute top-0 left-1/2 -translate-x-1/2 min-w-full min-h-full w-auto h-auto aspect-video pointer-events-none"
           src="https://www.youtube.com/embed/-FoZVap5I4o?autoplay=1&mute=1&loop=1&playlist=-FoZVap5I4o&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
