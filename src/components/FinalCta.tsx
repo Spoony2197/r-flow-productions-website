@@ -62,7 +62,7 @@ const FinalCta: React.FC = () => {
           <Button 
             variant="primary" 
             size="large"
-            onClick={() => window.open('https://calendly.com/sjackson2409/30min', '_blank')}
+            onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank')}
           >
             Book Your Strategy Session Now
           </Button>

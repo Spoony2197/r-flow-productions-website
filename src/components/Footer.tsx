@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
               Ready to transform your expertise into market authority? Book your strategy session today.
             </p>
             <a 
-              href="https://calendly.com/sjackson2409/30min"
+              href="https://calendly.com/sjackson2409/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex bg-accent-500 hover:bg-accent-600 text-dark-900 font-medium px-5 py-2 rounded-md transition-colors"
