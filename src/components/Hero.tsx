@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-dark-900/60 z-[1]"></div>
         <iframe
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] md:w-[200%] md:h-[200%] pointer-events-none"
+          className="absolute top-0 left-1/2 -translate-x-1/2 min-w-full min-h-full w-auto h-auto aspect-video pointer-events-none"
           src="https://www.youtube.com/embed/-FoZVap5I4o?autoplay=1&mute=1&loop=1&playlist=-FoZVap5I4o&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
           title="R Flow Productions background video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
