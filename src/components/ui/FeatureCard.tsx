@@ -26,7 +26,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       variants={itemVariants}
       whileHover={{ scale: 1.03, y: -6 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-      className="bg-dark-800 rounded-xl p-6 md:p-8 shadow-medium hover:shadow-[0_0_15px_rgba(239,68,68,0.4)] transition-shadow duration-300 relative overflow-hidden group cursor-default"
+      className="bg-dark-800 rounded-xl p-6 md:p-8 shadow-medium hover:shadow-[0_0_25px_rgba(239,68,68,0.35),0_0_8px_rgba(239,68,68,0.2)] transition-shadow duration-300 relative overflow-hidden group cursor-default"
     >
       {/* Decorative accent */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-accent-500 transform origin-left transition-transform duration-300 group-hover:scale-x-100 scale-x-75"></div>
