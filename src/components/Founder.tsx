@@ -1,12 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
+const founderPhotos = [
+  { src: '/founder/founder-1.jpg', alt: 'Sir-Tay Jackson, Founder & Chief Storyteller' },
+  { src: '/founder/founder-2.jpg', alt: 'Sir-Tay sitting on bench with camera, NYC street' },
+  { src: '/founder/founder-3.jpg', alt: 'Sir-Tay in plaid jacket, overhead shot with camera' },
+  { src: '/founder/founder-4.jpg', alt: 'Sir-Tay smiling with CineSaddle bag, Chinatown' },
+  { src: '/founder/founder-5.jpg', alt: 'Sir-Tay in pink polo, filming at Elevate event' },
+  { src: '/founder/founder-6.jpg', alt: 'Sir-Tay in R Flow Productions tee, headphones, camera rig' },
+  { src: '/founder/founder-7.jpg', alt: 'Sir-Tay in varsity jacket, holding camera' },
+];
+
+const getPosition = (index: number, active: number, total: number) => {
+  const distance = (index - active + total) % total;
+  if (distance === 0) return { scale: 1, y: 0, opacity: 1, zIndex: 30 };
+  if (distance === 1) return { scale: 0.92, y: 12, opacity: 0.6, zIndex: 20 };
+  if (distance === 2) return { scale: 0.84, y: 24, opacity: 0.35, zIndex: 10 };
+  return { scale: 0.8, y: 32, opacity: 0, zIndex: 0 };
+};
 
 const Founder: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const advance = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % founderPhotos.length);
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(advance, 4000);
+    return () => clearInterval(interval);
+  }, [isPaused, advance]);
 
   return (
     <section className="py-20 bg-white">
@@ -20,15 +51,41 @@ const Founder: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="md:col-span-2"
             >
-              <div className="relative">
-                <div className="absolute inset-0 -translate-x-4 -translate-y-4 border-2 border-brand-red rounded-xl z-0"></div>
-                <div className="relative overflow-hidden rounded-xl shadow-strong z-10">
-                  <img
-                    src="/untitled (1 of 1).jpg"
-                    alt="Sir-Tay Jackson, Founder & Chief Storyteller"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+              <div
+                className="relative aspect-[3/4] cursor-pointer"
+                onClick={advance}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+              >
+                <div className="absolute inset-0 -translate-x-4 -translate-y-4 border-2 border-brand-red rounded-xl z-0" />
+
+                {founderPhotos.map((photo, index) => {
+                  const pos = getPosition(index, activeIndex, founderPhotos.length);
+                  return (
+                    <motion.div
+                      key={photo.src}
+                      className="absolute inset-0 overflow-hidden rounded-xl shadow-strong"
+                      animate={{
+                        scale: pos.scale,
+                        y: pos.y,
+                        opacity: pos.opacity,
+                        zIndex: pos.zIndex,
+                      }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 300,
+                        damping: 30,
+                        duration: 0.6,
+                      }}
+                    >
+                      <img
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </motion.div>
+                  );
+                })}
               </div>
             </motion.div>
 
