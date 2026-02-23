@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const founderPhotos = [
-  { src: '/founder/founder-1.jpg', alt: 'Sir-Tay Jackson, Founder & Chief Storyteller' },
   { src: '/founder/founder-2.jpg', alt: 'Sir-Tay sitting on bench with camera, NYC street' },
   { src: '/founder/founder-3.jpg', alt: 'Sir-Tay in plaid jacket, overhead shot with camera' },
   { src: '/founder/founder-4.jpg', alt: 'Sir-Tay smiling with CineSaddle bag, Chinatown' },
