@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import Button from './ui/Button';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,16 +18,37 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: 'smooth'
-      });
-      setMobileMenuOpen(false);
+  const handleNavClick = (id: string) => {
+    setMobileMenuOpen(false);
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        window.scrollTo({
+          top: element.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          window.scrollTo({
+            top: element.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
     }
   };
+
+  const linkClass = `text-sm transition-colors cursor-pointer ${
+    isScrolled ? 'text-dark-400 hover:text-brand-maroon' : 'text-white/80 hover:text-white'
+  }`;
+
+  const activeLinkClass = `text-sm transition-colors cursor-pointer ${
+    isScrolled ? 'text-brand-maroon font-medium' : 'text-white font-medium'
+  }`;
 
   return (
     <header
@@ -36,40 +60,40 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center">
-          <img src="/R-Flow_LogoDesign (1).gif" alt="R Flow Productions Logo" className="h-8 mr-2" />
+          <Link to="/">
+            <img src="/R-Flow_LogoDesign (1).gif" alt="R Flow Productions Logo" className="h-8 mr-2" />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
-            onClick={() => scrollToSection('features')}
-            className={`text-sm transition-colors cursor-pointer ${
-              isScrolled ? 'text-dark-400 hover:text-brand-maroon' : 'text-white/80 hover:text-white'
-            }`}
+            onClick={() => handleNavClick('features')}
+            className={linkClass}
           >
             Why Us
           </a>
+          <Link
+            to="/services"
+            className={location.pathname === '/services' ? activeLinkClass : linkClass}
+          >
+            Services
+          </Link>
           <a
-            onClick={() => scrollToSection('process')}
-            className={`text-sm transition-colors cursor-pointer ${
-              isScrolled ? 'text-dark-400 hover:text-brand-maroon' : 'text-white/80 hover:text-white'
-            }`}
+            onClick={() => handleNavClick('process')}
+            className={linkClass}
           >
             Our Process
           </a>
           <a
-            onClick={() => scrollToSection('case-study')}
-            className={`text-sm transition-colors cursor-pointer ${
-              isScrolled ? 'text-dark-400 hover:text-brand-maroon' : 'text-white/80 hover:text-white'
-            }`}
+            onClick={() => handleNavClick('case-study')}
+            className={linkClass}
           >
             Results
           </a>
           <a
-            onClick={() => scrollToSection('faq')}
-            className={`text-sm transition-colors cursor-pointer ${
-              isScrolled ? 'text-dark-400 hover:text-brand-maroon' : 'text-white/80 hover:text-white'
-            }`}
+            onClick={() => handleNavClick('faq')}
+            className={linkClass}
           >
             FAQ
           </a>
@@ -96,25 +120,36 @@ const Header: React.FC = () => {
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-surface-border py-4">
           <div className="container mx-auto px-4 flex flex-col space-y-4">
             <a
-              onClick={() => scrollToSection('features')}
+              onClick={() => handleNavClick('features')}
               className="text-dark-400 hover:text-brand-maroon py-2 transition-colors cursor-pointer"
             >
               Why Us
             </a>
+            <Link
+              to="/services"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`py-2 transition-colors ${
+                location.pathname === '/services'
+                  ? 'text-brand-maroon font-medium'
+                  : 'text-dark-400 hover:text-brand-maroon'
+              }`}
+            >
+              Services
+            </Link>
             <a
-              onClick={() => scrollToSection('process')}
+              onClick={() => handleNavClick('process')}
               className="text-dark-400 hover:text-brand-maroon py-2 transition-colors cursor-pointer"
             >
               Our Process
             </a>
             <a
-              onClick={() => scrollToSection('case-study')}
+              onClick={() => handleNavClick('case-study')}
               className="text-dark-400 hover:text-brand-maroon py-2 transition-colors cursor-pointer"
             >
               Results
             </a>
             <a
-              onClick={() => scrollToSection('faq')}
+              onClick={() => handleNavClick('faq')}
               className="text-dark-400 hover:text-brand-maroon py-2 transition-colors cursor-pointer"
             >
               FAQ
