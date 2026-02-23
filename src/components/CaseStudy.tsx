@@ -11,7 +11,7 @@ const CaseStudy: React.FC = () => {
 
   return (
     <>
-      <section id="case-study" className="py-20 bg-dark-800">
+      <section id="case-study" className="py-20 bg-surface-muted">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
             <motion.div
@@ -21,7 +21,7 @@ const CaseStudy: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-brand-maroon mb-6">
                 Real Results: How We Transformed A Local Business Into The Go-To Authority
               </h2>
             </motion.div>
@@ -30,33 +30,33 @@ const CaseStudy: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8 }}
-              className="bg-dark-900/50 rounded-xl p-8 shadow-strong"
+              className="bg-white rounded-xl p-8 border border-surface-border shadow-medium"
             >
               <div className="mb-6">
-                <h3 className="text-lg font-bold text-white mb-2">The Challenge:</h3>
-                <p className="text-white/80">
+                <h3 className="text-lg font-display text-brand-maroon mb-2">The Challenge:</h3>
+                <p className="text-dark-400">
                   Local business struggling with competition, trying to establish authority in a crowded market
                 </p>
               </div>
-              
+
               <div className="mb-6">
-                <h3 className="text-lg font-bold text-white mb-2">Our Approach:</h3>
-                <ul className="list-disc list-inside text-white/80 space-y-2">
+                <h3 className="text-lg font-display text-brand-maroon mb-2">Our Approach:</h3>
+                <ul className="list-disc list-inside text-dark-400 space-y-2">
                   <li>Created a short documentary focusing on the business's unique philosophy and a client transformation story</li>
                   <li>Developed psychology-driven short-form content tailored specifically to their ideal client's motivations</li>
                   <li>Used our 4-step process to uncover what made them different from every other competitor</li>
                 </ul>
               </div>
-              
+
               <div className="mb-6">
-                <h3 className="text-lg font-bold text-white mb-2">The Results:</h3>
+                <h3 className="text-lg font-display text-brand-maroon mb-2">The Results:</h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li className="text-white/80">Positioned as the premier service provider in their area</li>
-                  <li className="text-white/80">Generated consistent leads through authentic storytelling</li>
+                  <li className="text-dark-400">Positioned as the premier service provider in their area</li>
+                  <li className="text-dark-400">Generated consistent leads through authentic storytelling</li>
                 </ul>
               </div>
-              
-              <blockquote className="border-l-4 border-accent-500 pl-4 italic text-white/90 mt-6">
+
+              <blockquote className="border-l-4 border-brand-red pl-4 italic text-dark-500 mt-6">
                 "This wasn't just video production—it was strategic positioning that changed our entire business."
               </blockquote>
             </motion.div>
@@ -64,7 +64,7 @@ const CaseStudy: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-dark-900">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             <motion.div
@@ -73,18 +73,18 @@ const CaseStudy: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-brand-maroon mb-6">
                 See Our Work In Action
               </h2>
-              <p className="text-white/80 text-lg">
+              <p className="text-dark-400 text-lg">
                 Watch how we bring strategic storytelling to life
               </p>
             </motion.div>
 
             <div className="mb-12">
               <div className="relative aspect-video rounded-xl overflow-hidden shadow-strong bg-dark-900">
-                <YouTubeEmbed 
-                  videoId="LkRhV20INwU" 
+                <YouTubeEmbed
+                  videoId="LkRhV20INwU"
                   className="rounded-xl"
                 />
               </div>

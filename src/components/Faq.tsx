@@ -12,13 +12,13 @@ interface FaqItemProps {
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, toggleOpen }) => {
   return (
-    <div className="border-b border-dark-700 last:border-b-0">
+    <div className="border-b border-surface-border last:border-b-0">
       <button
         className="flex items-center justify-between w-full py-6 text-left"
         onClick={toggleOpen}
       >
-        <h3 className="font-semibold text-lg">{question}</h3>
-        <div className="ml-4 flex-shrink-0">
+        <h3 className="font-semibold text-lg text-dark-500">{question}</h3>
+        <div className="ml-4 flex-shrink-0 text-dark-400">
           {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
         </div>
       </button>
@@ -27,7 +27,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, toggleOpen 
           isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="text-white/80">{answer}</div>
+        <div className="text-dark-400">{answer}</div>
       </div>
     </div>
   );
@@ -82,7 +82,7 @@ const Faq: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-dark-900">
+    <section id="faq" className="py-20 bg-surface-muted">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <motion.div
@@ -92,17 +92,17 @@ const Faq: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="font-display text-3xl md:text-4xl text-brand-maroon mb-4">
               Frequently Asked Questions
             </h2>
-            <div className="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-dark-800/50 rounded-xl p-6 md:p-8 shadow-strong"
+            className="bg-white rounded-xl p-6 md:p-8 border border-surface-border shadow-medium"
           >
             {faqs.map((faq, index) => (
               <FaqItem

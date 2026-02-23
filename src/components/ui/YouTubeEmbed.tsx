@@ -46,7 +46,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
         <div className="flex items-center justify-between">
           <button
             onClick={openInYouTube}
-            className="flex items-center gap-2 text-white hover:text-red-500 transition-colors"
+            className="flex items-center gap-2 text-white hover:text-brand-bright transition-colors"
             title="Open in YouTube"
           >
             <ExternalLink className="w-5 h-5" />
@@ -55,7 +55,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
           
           <button
             onClick={enterFullscreen}
-            className="text-white hover:text-red-500 transition-colors"
+            className="text-white hover:text-brand-bright transition-colors"
             title="Fullscreen"
           >
             <Maximize className="w-5 h-5" />
