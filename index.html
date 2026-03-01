@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Meta Pixel Code -->
+    <!-- Meta Pixel Code (production only) -->
     <script>
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -21,11 +22,12 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1242193053690827');
     fbq('track', 'PageView');
+    }
     </script>
     <!-- End Meta Pixel Code -->
   </head>
   <body class="bg-surface-cream text-dark-500">
-    <!-- Meta Pixel noscript fallback -->
+    <!-- Meta Pixel noscript fallback (production only — noscript won't fire on localhost) -->
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1242193053690827&ev=PageView&noscript=1"
     /></noscript>

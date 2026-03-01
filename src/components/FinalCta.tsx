@@ -14,7 +14,7 @@ const FinalCta: React.FC = () => {
     <section id="cta" className="py-20 bg-dark-800 relative overflow-hidden">
       {/* Background gradient and overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-maroon/40 to-dark-900/60 z-0"></div>
-      <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3062541/pexels-photo-3062541.jpeg')] bg-cover bg-center opacity-10 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/pexels-video-production.jpeg')] bg-cover bg-center opacity-10 z-0"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div
@@ -62,7 +62,7 @@ const FinalCta: React.FC = () => {
           <Button
             variant="primary"
             size="large"
-            onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank')}
+            onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank', 'noopener,noreferrer')}
           >
             Book Your Strategy Session Now
           </Button>

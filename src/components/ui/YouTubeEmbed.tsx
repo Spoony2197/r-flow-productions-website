@@ -13,7 +13,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   const openInYouTube = () => {
-    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank', 'noopener,noreferrer');
   };
 
   const enterFullscreen = () => {

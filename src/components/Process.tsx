@@ -82,7 +82,7 @@ const Process: React.FC = () => {
           <Button
             variant="secondary"
             size="large"
-            onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank')}
+            onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank', 'noopener,noreferrer')}
           >
             See This Process In Action
           </Button>

@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
             <Button
               variant="primary"
               size="large"
-              onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank')}
+              onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank', 'noopener,noreferrer')}
             >
               Book Your Strategy Session
             </Button>

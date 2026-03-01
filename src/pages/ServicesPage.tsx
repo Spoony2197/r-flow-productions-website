@@ -62,7 +62,7 @@ const ServiceAccordionItem: React.FC<ServiceAccordionItemProps> = ({
             variant="primary"
             size="medium"
             onClick={() =>
-              window.open('https://calendly.com/sjackson2409/15min', '_blank')
+              window.open('https://calendly.com/sjackson2409/15min', '_blank', 'noopener,noreferrer')
             }
           >
             Book a Strategy Call
@@ -454,7 +454,7 @@ const ServicesPage: React.FC = () => {
             </p>
             <Button
               onClick={() =>
-                window.open('https://calendly.com/sjackson2409/15min', '_blank')
+                window.open('https://calendly.com/sjackson2409/15min', '_blank', 'noopener,noreferrer')
               }
               variant="primary"
               size="large"

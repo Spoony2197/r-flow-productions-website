@@ -98,7 +98,7 @@ const Header: React.FC = () => {
             FAQ
           </a>
           <Button
-            onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank')}
+            onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank', 'noopener,noreferrer')}
             variant="primary"
             size="small"
           >
@@ -155,7 +155,7 @@ const Header: React.FC = () => {
               FAQ
             </a>
             <Button
-              onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank')}
+              onClick={() => window.open('https://calendly.com/sjackson2409/15min', '_blank', 'noopener,noreferrer')}
               variant="primary"
               size="small"
               className="w-full"
