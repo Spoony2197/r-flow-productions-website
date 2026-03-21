@@ -69,6 +69,77 @@ const TermsOfServicePage: React.FC = () => {
 
           <section>
             <h2 className="font-display text-2xl text-dark-500 mb-4">
+              SMS/Text Messaging Terms
+            </h2>
+            <p className="mb-4">
+              By opting in to receive SMS/text messages from R Flow Productions
+              through our website chat widget, you agree to the following terms:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li>
+                <strong>Consent:</strong> By providing your mobile phone number
+                and opting in via our chat widget, you expressly consent to
+                receive text messages from R Flow Productions. Consent is not
+                required as a condition of purchasing any goods or services.
+              </li>
+              <li>
+                <strong>Message types:</strong> Messages may include appointment
+                reminders, follow-up communications, service updates, and
+                promotional/marketing messages related to our video production
+                services.
+              </li>
+              <li>
+                <strong>Message frequency:</strong> Message frequency varies.
+                You may receive up to 5 messages per week.
+              </li>
+              <li>
+                <strong>Message and data rates:</strong> Message and data rates
+                may apply. Please contact your wireless carrier for pricing
+                details.
+              </li>
+              <li>
+                <strong>Opt-out:</strong> You may opt out at any time by
+                replying <strong>STOP</strong> to any text message. You will
+                receive a one-time confirmation message, and no further messages
+                will be sent.
+              </li>
+              <li>
+                <strong>Help:</strong> For assistance, reply{' '}
+                <strong>HELP</strong> to any message or contact us at{' '}
+                <a
+                  href="mailto:sir-tay.jackson@rflowproductions.com"
+                  className="text-brand-bright hover:underline"
+                >
+                  sir-tay.jackson@rflowproductions.com
+                </a>{' '}
+                or{' '}
+                <a
+                  href="tel:203-309-7484"
+                  className="text-brand-bright hover:underline"
+                >
+                  203-309-7484
+                </a>
+                .
+              </li>
+              <li>
+                <strong>Mobile information sharing:</strong> We do not share,
+                sell, or rent your mobile phone number or SMS opt-in information
+                with third parties or affiliates for their marketing or
+                promotional purposes.
+              </li>
+            </ul>
+            <p>
+              By using the chat widget and providing your phone number, you
+              acknowledge that you have read and agree to these SMS terms, our{' '}
+              <a href="/privacy" className="text-brand-bright hover:underline">
+                Privacy Policy
+              </a>
+              , and these Terms of Service.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl text-dark-500 mb-4">
               Intellectual Property
             </h2>
             <p className="mb-4">

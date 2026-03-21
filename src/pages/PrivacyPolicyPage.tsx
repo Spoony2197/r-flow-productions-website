@@ -19,7 +19,7 @@ const PrivacyPolicyPage: React.FC = () => {
               and is committed to protecting your personal data. This Privacy
               Policy explains how we collect, use, disclose, and safeguard your
               information when you visit our website at rflowproductions.com (the
-              "Site").
+              "Site") or interact with us via SMS/text messaging.
             </p>
           </section>
 
@@ -38,11 +38,13 @@ const PrivacyPolicyPage: React.FC = () => {
               <li>Fill out a contact form or inquiry</li>
               <li>Book a consultation or strategy session</li>
               <li>Subscribe to our newsletter or mailing list</li>
-              <li>Communicate with us via email or phone</li>
+              <li>Communicate with us via email, phone, or SMS/text message</li>
+              <li>Opt in to receive text messages through our chat widget</li>
             </ul>
             <p className="mb-4">
               This information may include your name, email address, phone
-              number, company name, and any other details you choose to share.
+              number, mobile number, company name, and any other details you
+              choose to share.
             </p>
 
             <h3 className="font-semibold text-dark-500 mb-2">
@@ -82,6 +84,10 @@ const PrivacyPolicyPage: React.FC = () => {
             <ul className="list-disc pl-6 space-y-2">
               <li>To respond to your inquiries and provide requested services</li>
               <li>To schedule and manage consultations</li>
+              <li>
+                To send SMS/text messages related to your inquiry, appointment
+                reminders, and follow-ups (with your consent)
+              </li>
               <li>To send marketing communications (with your consent)</li>
               <li>To improve our website and services</li>
               <li>
@@ -89,6 +95,79 @@ const PrivacyPolicyPage: React.FC = () => {
               </li>
               <li>To comply with legal obligations</li>
             </ul>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl text-dark-500 mb-4">
+              SMS/Text Messaging Opt-In and Details
+            </h2>
+            <p className="mb-4">
+              By providing your mobile phone number through our website chat
+              widget, you consent to receive SMS/text messages from R Flow
+              Productions. By opting in, you agree to the following:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li>
+                <strong>Message types:</strong> You may receive appointment
+                reminders, follow-up messages, service updates, and
+                promotional/marketing messages related to our video production
+                services.
+              </li>
+              <li>
+                <strong>Message frequency:</strong> Message frequency varies.
+                You may receive up to 5 messages per week depending on your
+                interactions and preferences.
+              </li>
+              <li>
+                <strong>Message and data rates:</strong> Message and data rates
+                may apply. Please contact your wireless carrier for details
+                about your messaging plan.
+              </li>
+              <li>
+                <strong>Opt-out:</strong> You can opt out of receiving text
+                messages at any time by replying <strong>STOP</strong> to any
+                message. After opting out, you will receive a confirmation
+                message and will no longer receive SMS messages from us.
+              </li>
+              <li>
+                <strong>Help:</strong> For help, reply <strong>HELP</strong> to
+                any message or contact us at{' '}
+                <a
+                  href="mailto:sir-tay.jackson@rflowproductions.com"
+                  className="text-brand-bright hover:underline"
+                >
+                  sir-tay.jackson@rflowproductions.com
+                </a>{' '}
+                or{' '}
+                <a
+                  href="tel:203-309-7484"
+                  className="text-brand-bright hover:underline"
+                >
+                  203-309-7484
+                </a>
+                .
+              </li>
+            </ul>
+            <p>
+              Your consent to receive SMS messages is not a condition of
+              purchasing any goods or services. You may opt in or opt out at any
+              time without affecting your ability to use our services.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl text-dark-500 mb-4">
+              Mobile Information Sharing
+            </h2>
+            <p>
+              We do not share, sell, rent, or otherwise disclose your mobile
+              phone number or any information collected through SMS opt-in with
+              third parties or affiliates for their own marketing or promotional
+              purposes. Mobile information will not be shared with third parties
+              or affiliates for marketing/promotional purposes. All other
+              categories of data may be shared as described in the "Sharing Your
+              Information" section below.
+            </p>
           </section>
 
           <section>
@@ -105,17 +184,24 @@ const PrivacyPolicyPage: React.FC = () => {
               </li>
               <li>
                 <strong>Analytics cookies:</strong> help us understand how
-                visitors interact with our Site
+                visitors interact with our Site (e.g., page views, session
+                duration, traffic sources)
               </li>
               <li>
                 <strong>Marketing cookies:</strong> used to deliver relevant
                 advertisements and track campaign effectiveness
               </li>
             </ul>
-            <p>
+            <p className="mb-4">
               We use the Meta (Facebook) Pixel to measure the effectiveness of
-              our advertising, customize audiences, and retarget visitors. You
-              can manage your cookie preferences through your browser settings.
+              our advertising, customize audiences, and retarget visitors. The
+              Meta Pixel collects data such as pages visited, actions taken on
+              the site, and device information.
+            </p>
+            <p>
+              You can manage your cookie preferences through your browser
+              settings. Disabling cookies may affect some functionality of the
+              Site.
             </p>
           </section>
 
@@ -131,7 +217,7 @@ const PrivacyPolicyPage: React.FC = () => {
               <li>
                 <strong>Service providers:</strong> third-party tools we use to
                 operate our business (e.g., email platforms, scheduling tools,
-                analytics services)
+                analytics services, CRM systems)
               </li>
               <li>
                 <strong>Advertising partners:</strong> such as Meta, for
@@ -142,6 +228,36 @@ const PrivacyPolicyPage: React.FC = () => {
                 protect our rights
               </li>
             </ul>
+          </section>
+
+          <section>
+            <h2 className="font-display text-2xl text-dark-500 mb-4">
+              Data Security and Handling
+            </h2>
+            <p className="mb-4">
+              We implement appropriate technical and organizational security
+              measures to protect your personal information against unauthorized
+              access, alteration, disclosure, or destruction. These measures
+              include:
+            </p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li>Secure HTTPS encryption on all pages of our Site</li>
+              <li>
+                Restricted access to personal information on a need-to-know
+                basis
+              </li>
+              <li>
+                Use of reputable third-party service providers with their own
+                security measures
+              </li>
+              <li>Regular review of our data collection and storage practices</li>
+            </ul>
+            <p>
+              While we strive to protect your personal information, no method of
+              transmission over the Internet or electronic storage is 100%
+              secure. We cannot guarantee absolute security but are committed to
+              maintaining industry-standard protections.
+            </p>
           </section>
 
           <section>
@@ -162,13 +278,25 @@ const PrivacyPolicyPage: React.FC = () => {
             <p className="mb-4">
               Depending on your location, you may have the right to:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc pl-6 space-y-2 mb-4">
               <li>Access the personal data we hold about you</li>
               <li>Request correction of inaccurate data</li>
               <li>Request deletion of your data</li>
               <li>Opt out of marketing communications</li>
               <li>Opt out of targeted advertising and tracking</li>
+              <li>
+                Opt out of SMS/text messages by replying STOP to any message
+              </li>
+              <li>
+                Withdraw consent for data processing where consent is the legal
+                basis
+              </li>
             </ul>
+            <p>
+              To exercise any of these rights, please contact us using the
+              information below. We will respond to your request within a
+              reasonable timeframe and in accordance with applicable law.
+            </p>
           </section>
 
           <section>

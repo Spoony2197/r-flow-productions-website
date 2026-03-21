@@ -72,13 +72,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 pt-6 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/20 pt-6 pb-4">
+          <p className="text-white/40 text-xs text-center max-w-2xl mx-auto mb-4">
+            By providing your phone number via our chat widget, you agree to receive SMS/text messages from R Flow Productions. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time. Reply HELP for assistance. View our{' '}
+            <a href="/privacy" className="underline hover:text-brand-bright transition-colors">Privacy Policy</a> and{' '}
+            <a href="/terms" className="underline hover:text-brand-bright transition-colors">Terms of Service</a>.
+          </p>
+        </div>
+
+        <div className="border-t border-white/10 pt-4 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/50 text-sm">
             &copy; {currentYear} R Flow Productions. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <a href="/privacy" className="text-white/70 hover:text-brand-bright transition-colors">Privacy Policy</a>
-            <a href="/terms" className="text-white/70 hover:text-brand-bright transition-colors">Terms of Service</a>
+            <a href="/privacy" className="text-white/70 hover:text-brand-bright transition-colors text-sm">Privacy Policy</a>
+            <a href="/terms" className="text-white/70 hover:text-brand-bright transition-colors text-sm">Terms of Service</a>
           </div>
         </div>
       </div>
