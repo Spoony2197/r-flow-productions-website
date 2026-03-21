@@ -11,6 +11,8 @@ import Founder from './components/Founder';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ServicesPage from './pages/ServicesPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 function HomePage() {
   return (
@@ -35,6 +37,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms" element={<TermsOfServicePage />} />
         </Routes>
       </main>
       <Footer />
