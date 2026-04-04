@@ -117,28 +117,6 @@ const categories: ServiceCategory[] = [
         ],
       },
       {
-        name: 'Product Launch Videos',
-        tagline: 'Make your launch impossible to ignore',
-        description:
-          "A product launch gets one shot at first impressions. We create launch videos that don't just announce \u2014 they build anticipation, communicate unique value, and position your offering as the obvious choice in your market.",
-        outcomes: [
-          'Strategic narrative that differentiates from competitors on day one',
-          'Multi-format content for maximum launch coverage',
-          'Emotional connection that drives early adoption',
-        ],
-      },
-      {
-        name: 'Event Coverage',
-        tagline: 'Turn a single event into months of authority content',
-        description:
-          'Events are goldmines of content that most companies waste. We capture the energy, insights, and key moments of your events and transform them into a strategic content library that extends your authority far beyond the event itself.',
-        outcomes: [
-          'Professional highlight reels that showcase your industry presence',
-          'Repurposable clips for social, email, and sales enablement',
-          'Content that positions you as a thought leader in your space',
-        ],
-      },
-      {
         name: 'Testimonial & Case Study Videos',
         tagline: 'Let your results speak through the people who lived them',
         description:
@@ -147,39 +125,6 @@ const categories: ServiceCategory[] = [
           "Social proof that addresses your prospects' exact objections",
           'Authentic stories that create emotional connection and trust',
           'Versatile assets for your website, sales process, and social channels',
-        ],
-      },
-      {
-        name: 'Training & Tutorial Videos',
-        tagline: 'Turn your expertise into scalable education',
-        description:
-          'Your knowledge is one of your most valuable business assets. We transform your expertise into clear, engaging training content that educates your team or your customers \u2014 reducing support costs, accelerating onboarding, and reinforcing your authority as the go-to expert.',
-        outcomes: [
-          'Professional training that scales without scaling your time',
-          'Content that reduces repetitive questions and support tickets',
-          'Educational authority that deepens client loyalty',
-        ],
-      },
-      {
-        name: 'Email Marketing Videos',
-        tagline: 'Break through the inbox with video that demands attention',
-        description:
-          'Email open rates are declining across every industry. Video changes the equation. We create strategic video content designed specifically for email campaigns that boost open rates, increase click-throughs, and move prospects further down your sales pipeline.',
-        outcomes: [
-          'Higher open and click-through rates on your campaigns',
-          'Personalized video touchpoints that nurture trust',
-          'Content that differentiates your emails from every text-only competitor',
-        ],
-      },
-      {
-        name: 'Content Repurposing',
-        tagline: 'One shoot. Dozens of strategic assets.',
-        description:
-          'You\'re sitting on a library of underutilized content. We take your existing long-form videos, webinars, and presentations and strategically break them into bite-sized, platform-optimized pieces that multiply your reach without multiplying your production budget.',
-        outcomes: [
-          "Maximum ROI from content you've already created",
-          'Consistent posting schedule without constant new production',
-          'Platform-specific edits that perform natively on each channel',
         ],
       },
     ],
@@ -213,28 +158,6 @@ const categories: ServiceCategory[] = [
         ],
       },
       {
-        name: 'YouTube Channel Management',
-        tagline: 'Turn your YouTube channel into an authority-building machine',
-        description:
-          'YouTube is the second largest search engine in the world, and it rewards strategic, consistent creators. We manage your entire channel \u2014 from content strategy and SEO optimization to upload scheduling and growth tactics \u2014 so your channel becomes a compounding asset for your brand.',
-        outcomes: [
-          'SEO-optimized content that ranks and gets discovered organically',
-          'Strategic publishing cadence that builds subscriber loyalty',
-          'Analytics-driven growth strategy tailored to your niche',
-        ],
-      },
-      {
-        name: 'Podcast Video Production',
-        tagline: "Expand your podcast's reach with professional video",
-        description:
-          'Audio-only podcasts leave massive reach on the table. We produce high-quality video versions of your podcast that unlock YouTube, social media clips, and visual storytelling \u2014 transforming your conversations into a multi-platform authority engine.',
-        outcomes: [
-          'Professional multi-camera production that elevates your show',
-          'Clip-ready highlights for social media distribution',
-          'Full video episodes that open the YouTube discovery channel',
-        ],
-      },
-      {
         name: 'Corporate Communication Videos',
         tagline: 'Keep your team aligned, informed, and inspired',
         description:
@@ -265,17 +188,6 @@ const categories: ServiceCategory[] = [
         ],
       },
       {
-        name: 'Corporate Identity Videos',
-        tagline: 'Crystallize your mission into a visual statement',
-        description:
-          "Your corporate identity shouldn't live in a PDF. We translate your mission, values, and vision into compelling video that communicates who you are at a level text simply cannot achieve \u2014 creating a visual identity piece that strengthens every stakeholder relationship.",
-        outcomes: [
-          'Professional identity piece for investors, partners, and recruits',
-          'Consistent brand messaging across all touchpoints',
-          'A visual anchor for your corporate communications',
-        ],
-      },
-      {
         name: 'Website Introduction Videos',
         tagline: 'Turn your homepage into your hardest-working salesperson',
         description:
@@ -284,17 +196,6 @@ const categories: ServiceCategory[] = [
           'Increased time-on-site and reduced bounce rates',
           'Immediate trust-building with first-time visitors',
           'Clear value communication that drives conversions',
-        ],
-      },
-      {
-        name: 'Product Explainer Videos',
-        tagline: 'Make the complex compelling and the technical irresistible',
-        description:
-          "The most innovative products fail when people don't understand them. We create explainer videos that translate complex features into clear, emotionally resonant benefits \u2014 helping your prospects see exactly why your solution is the one they've been searching for.",
-        outcomes: [
-          'Simplified messaging that accelerates the sales cycle',
-          'Visual storytelling that makes technical advantages tangible',
-          'A versatile asset for sales, marketing, and investor conversations',
         ],
       },
       {
@@ -328,17 +229,6 @@ const categories: ServiceCategory[] = [
           'Broadcast-quality production that elevates brand perception',
           'Strategic messaging that drives specific business objectives',
           'Campaign-ready assets optimized for TV and digital platforms',
-        ],
-      },
-      {
-        name: 'One-Time Event Videos',
-        tagline: 'Capture the moments that matter most',
-        description:
-          'Some events only happen once \u2014 a grand opening, an anniversary, a milestone celebration. We ensure these defining moments are captured with the production quality and narrative craft they deserve, creating a permanent record that reinforces your brand story for years to come.',
-        outcomes: [
-          'Professional documentation of your milestone moments',
-          'Highlight content for marketing, social, and internal use',
-          "A lasting asset that tells the story of your brand's journey",
         ],
       },
     ],
