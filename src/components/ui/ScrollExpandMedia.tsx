@@ -71,12 +71,24 @@ const ScrollExpandMedia: React.FC<ScrollExpandMediaProps> = ({
   const scrollIndicatorOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   // Overlay darkening fades out as video expands
-  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.4, 0]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.2, 0]);
 
   // Play button appears after expansion
   const playButtonOpacity = useTransform(scrollYProgress, [0.55, 0.7], [0, 1]);
 
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const thumbnailFallbacks = [
+    `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`,
+    `https://img.youtube.com/vi/${videoId}/sddefault.jpg`,
+    `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+  ];
+  const [thumbnailIndex, setThumbnailIndex] = useState(0);
+  const thumbnailUrl = thumbnailFallbacks[thumbnailIndex];
+
+  const handleThumbnailError = () => {
+    if (thumbnailIndex < thumbnailFallbacks.length - 1) {
+      setThumbnailIndex(thumbnailIndex + 1);
+    }
+  };
 
   const firstWord = title.split(' ').slice(0, 3).join(' ');
   const restOfTitle = title.split(' ').slice(3).join(' ');
@@ -116,6 +128,7 @@ const ScrollExpandMedia: React.FC<ScrollExpandMediaProps> = ({
                     src={thumbnailUrl}
                     alt={title}
                     className="w-full h-full object-cover"
+                    onError={handleThumbnailError}
                   />
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                     <div className="w-20 h-20 rounded-full bg-brand-bright/90 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -171,8 +184,9 @@ const ScrollExpandMedia: React.FC<ScrollExpandMediaProps> = ({
                 src={thumbnailUrl}
                 alt={title}
                 className="w-full h-full object-cover"
+                onError={handleThumbnailError}
               />
-              {/* Dark overlay that fades as you scroll */}
+              {/* Light overlay that fades as you scroll */}
               <motion.div
                 className="absolute inset-0 bg-black"
                 style={{ opacity: overlayOpacity }}
